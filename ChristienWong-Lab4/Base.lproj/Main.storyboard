@@ -62,7 +62,7 @@
         <scene sceneID="aQY-0A-VAL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="shR-wm-Fqb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" image="app" catalog="system" id="3C6-lH-hGn"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="SeachIcon" id="3C6-lH-hGn"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="E4f-R2-SqM">
                         <rect key="frame" x="0.0" y="118" width="393" height="54"/>
@@ -77,11 +77,11 @@
             </objects>
             <point key="canvasLocation" x="-40.458015267175568" y="-465.49295774647891"/>
         </scene>
-        <!--Item 2-->
+        <!--Favorites-->
         <scene sceneID="RXA-LX-upV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zCU-Wu-wzz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="c0V-tx-zga"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="FavoriteIcon" id="c0V-tx-zga"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zbh-Ic-3Zt">
                         <rect key="frame" x="0.0" y="118" width="393" height="54"/>
@@ -98,7 +98,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="app" catalog="system" width="128" height="114"/>
+        <image name="FavoriteIcon" width="25" height="25"/>
+        <image name="SeachIcon" width="25" height="25"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
