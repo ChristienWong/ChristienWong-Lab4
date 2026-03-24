@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		7B8A948D2F70F5D5008D2539 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8A948C2F70F5D5008D2539 /* SearchViewController.swift */; };
 		7B8A94A22F70F751008D2539 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8A94A12F70F751008D2539 /* FavoritesViewController.swift */; };
+		7BE621742F72B0F700B781F4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE621732F72B02700B781F4 /* NetworkManager.swift */; };
+		7BE621752F72B0FD00B781F4 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE621722F72B00800B781F4 /* Movie.swift */; };
+		7BE621782F72B6ED00B781F4 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE621772F72B6ED00B781F4 /* MovieCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7B8A94852F70F5D5008D2539 /* ChristienWong-Lab4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "ChristienWong-Lab4.app"; path = "/Volumes/Macintosh_HD/Users/user286461/Documents/ChristienWong-Lab4/build/Debug-iphoneos/ChristienWong-Lab4.app"; sourceTree = "<absolute>"; };
 		7B8A948C2F70F5D5008D2539 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		7B8A94A12F70F751008D2539 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		7BE621632F72A9AC00B781F4 /* ChristienWong-Lab4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ChristienWong-Lab4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BE621722F72B00800B781F4 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		7BE621732F72B02700B781F4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		7BE621772F72B6ED00B781F4 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -56,12 +62,15 @@
 				7B8A949D2F70F5F6008D2539 /* Models */,
 				7B8A949E2F70F61C008D2539 /* Views */,
 				7B8A94A02F70F660008D2539 /* Controllers */,
+				7BE621632F72A9AC00B781F4 /* ChristienWong-Lab4.app */,
 			);
 			sourceTree = "<group>";
 		};
 		7B8A949D2F70F5F6008D2539 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7BE621732F72B02700B781F4 /* NetworkManager.swift */,
+				7BE621722F72B00800B781F4 /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -69,6 +78,7 @@
 		7B8A949E2F70F61C008D2539 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7BE621772F72B6ED00B781F4 /* MovieCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -104,7 +114,7 @@
 			packageProductDependencies = (
 			);
 			productName = "ChristienWong-Lab4";
-			productReference = 7B8A94852F70F5D5008D2539 /* ChristienWong-Lab4.app */;
+			productReference = 7BE621632F72A9AC00B781F4 /* ChristienWong-Lab4.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -156,7 +166,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BE621782F72B6ED00B781F4 /* MovieCell.swift in Sources */,
 				7B8A948D2F70F5D5008D2539 /* SearchViewController.swift in Sources */,
+				7BE621752F72B0FD00B781F4 /* Movie.swift in Sources */,
+				7BE621742F72B0F700B781F4 /* NetworkManager.swift in Sources */,
 				7B8A94A22F70F751008D2539 /* FavoritesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
