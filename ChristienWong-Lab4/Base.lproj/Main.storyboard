@@ -33,42 +33,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Klq-vH-z6C">
-                                <rect key="frame" x="-9" y="178" width="393" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Klq-vH-z6C">
+                                <rect key="frame" x="0.0" y="172" width="393" height="64"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="Fj6-fI-H27" id="uGa-B4-1F8"/>
                                 </connections>
                             </searchBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bOT-zd-Tfd">
-                                <rect key="frame" x="67" y="280" width="240" height="396"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bOT-zd-Tfd">
+                                <rect key="frame" x="0.0" y="236" width="393" height="499"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="h9c-i5-Bb9">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="h9c-i5-Bb9">
                                     <size key="itemSize" width="122" height="180"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <activityIndicatorView key="backgroundView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" id="2rk-IB-WlU">
-                                    <rect key="frame" x="0.0" y="0.0" width="240" height="396"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="499"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </activityIndicatorView>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCell" id="tAo-Ca-hmO" customClass="MovieCell" customModule="ChristienWong_Lab4" customModuleProvider="target">
-                                        <rect key="frame" x="59" y="0.0" width="122" height="180"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pew-xw-BHh">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="MovieCell" id="jtb-u7-tGh" customClass="MovieCell" customModule="ChristienWong_Lab4" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="122" height="180"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="aE3-Tn-1Ce">
                                             <rect key="frame" x="0.0" y="0.0" width="122" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O5n-YN-uyl">
-                                                    <rect key="frame" x="0.0" y="0.0" width="122" height="142"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v7x-AY-WKi">
+                                                    <rect key="frame" x="0.0" y="8" width="122" height="132"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfm-zR-qbR">
-                                                    <rect key="frame" x="40" y="150" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lG-Uu-La1">
+                                                    <rect key="frame" x="40" y="151" width="42" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -76,10 +74,9 @@
                                                 </label>
                                             </subviews>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="122" height="180"/>
                                         <connections>
-                                            <outlet property="posterImageView" destination="O5n-YN-uyl" id="aci-j9-WcQ"/>
-                                            <outlet property="titleLabel" destination="Lfm-zR-qbR" id="mIm-pH-xrJ"/>
+                                            <outlet property="posterImageView" destination="v7x-AY-WKi" id="ZLb-3g-oiE"/>
+                                            <outlet property="titleLabel" destination="5lG-Uu-La1" id="lYL-li-ac7"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -87,6 +84,15 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7sd-Pu-9Se"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7sd-Pu-9Se" firstAttribute="trailing" secondItem="bOT-zd-Tfd" secondAttribute="trailing" id="9dO-zv-sa8"/>
+                            <constraint firstItem="7sd-Pu-9Se" firstAttribute="trailing" secondItem="Klq-vH-z6C" secondAttribute="trailing" id="D7d-dh-1N6"/>
+                            <constraint firstItem="Klq-vH-z6C" firstAttribute="leading" secondItem="agx-T4-lAc" secondAttribute="leading" id="I9O-yV-Ii8"/>
+                            <constraint firstItem="7sd-Pu-9Se" firstAttribute="bottom" secondItem="bOT-zd-Tfd" secondAttribute="bottom" id="fxw-GP-3Ju"/>
+                            <constraint firstItem="bOT-zd-Tfd" firstAttribute="top" secondItem="Klq-vH-z6C" secondAttribute="bottom" id="le1-bz-ip5"/>
+                            <constraint firstItem="bOT-zd-Tfd" firstAttribute="leading" secondItem="7sd-Pu-9Se" secondAttribute="leading" id="ofr-E2-vcf"/>
+                            <constraint firstItem="Klq-vH-z6C" firstAttribute="top" secondItem="7sd-Pu-9Se" secondAttribute="top" id="vLV-Xo-pig"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Y9O-xb-Eih"/>
                     <connections>
