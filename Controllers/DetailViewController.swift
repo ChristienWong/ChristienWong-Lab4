@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class DetailViewController: UIViewController {
 
@@ -21,21 +22,19 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Make sure we successfully received a movie
+        
         if let currentMovie = movie {
             
-            // 1. Set the text labels
+            
             titleLabel.text = currentMovie.title
             overviewLabel.text = currentMovie.overview
             
-            // Provide fallback text just in case the API is missing a date
             releaseDateLabel.text = "Released: \(currentMovie.release_date ?? "Unknown")"
             scoreLabel.text = "Score: \(currentMovie.vote_average)/10"
-            
-            // 2. Fetch the high-resolution poster
+           
             if let posterPath = currentMovie.poster_path {
                 networkManager.fetchImage(posterPath: posterPath) { [weak self] image in
-                    // We don't need to check for recycling here since this screen only ever shows one movie
+                   
                     self?.posterImageView.image = image
                 }
             }
@@ -48,23 +47,23 @@ class DetailViewController: UIViewController {
             let defaults = UserDefaults.standard
             var favorites: [Movie] = []
             
-            // 1. Pull the existing array of favorites from the device (if it exists)
+           
             if let savedData = defaults.data(forKey: "favorites"),
                let decoded = try? JSONDecoder().decode([Movie].self, from: savedData) {
                 favorites = decoded
             }
             
-            // 2. Check if the movie is already in the array to prevent duplicates
+           
             if !favorites.contains(where: { $0.id == currentMovie.id }) {
                 
-                // Add the new movie
+             
                 favorites.append(currentMovie)
                 
-                // 3. Encode the updated array back into JSON and save it
+               
                 if let encoded = try? JSONEncoder().encode(favorites) {
                     defaults.set(encoded, forKey: "favorites")
                     
-                    // Give the user visual feedback
+                    
                     sender.setTitle("Saved!", for: .normal)
                     sender.isEnabled = false
                 }
@@ -74,14 +73,52 @@ class DetailViewController: UIViewController {
             }
     }
     
-    /*
-    // MARK: - Navigation
+   
+    
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func viewOnWebTapped(_ sender: Any) {
+        guard let currentMovie = movie, let movieId = currentMovie.id else { return }
+                
+              
+                let urlString = "https://www.themoviedb.org/movie/\(movieId)"
+               
+                if let url = URL(string: urlString) {
+                    
+                
+                    let safariVC = SFSafariViewController(url: url)
+                    
+                   
+                    present(safariVC, animated: true, completion: nil)
+                }
+        
     }
-    */
-
+    
+    @IBAction func shareTapped(_ sender: UIButton) {
+        guard let currentMovie = movie, let movieId = currentMovie.id else { return }
+                
+             
+                let textToShare = "Check out this movie: \(currentMovie.title)!"
+                
+                
+                let urlString = "https://www.themoviedb.org/movie/\(movieId)"
+                let urlToShare = URL(string: urlString)
+               
+                var itemsToShare: [Any] = [textToShare]
+                if let safeUrl = urlToShare {
+                    itemsToShare.append(safeUrl)
+                }
+                
+                
+                let activityVC = UIActivityViewController(activityItems: itemsToShare, applicationActivities: nil)
+                
+               
+                if let popoverController = activityVC.popoverPresentationController {
+                    popoverController.sourceView = sender
+                    popoverController.sourceRect = sender.bounds
+                }
+                
+           
+                present(activityVC, animated: true, completion: nil)
+    }
+    
 }
