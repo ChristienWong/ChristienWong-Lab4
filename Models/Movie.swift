@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct APIResults: Decodable {
+struct APIResults: Codable {
     let page: Int
     let total_results: Int
     let total_pages: Int
     let results: [Movie]
 }
 
-struct Movie: Decodable {
+struct Movie: Codable, Equatable{
     let id: Int!
     let poster_path: String?
     let title: String
@@ -22,5 +22,6 @@ struct Movie: Decodable {
     let vote_average: Double
     let overview: String
     let vote_count: Int!
+    
 }
 

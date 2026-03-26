@@ -115,4 +115,19 @@ class SearchViewController: UIViewController {
             
             return CGSize(width: width, height: height)
         }
+        
+        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            // 1. Find out which movie was tapped
+            let selectedMovie = movies[indexPath.item]
+            
+            // 2. Instantiate the Detail View Controller from the storyboard
+            if let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
+                
+                // 3. Pass the selected movie to the new screen
+                detailVC.movie = selectedMovie
+                
+                // 4. Push it onto the navigation stack (makes it slide in from the right)
+                navigationController?.pushViewController(detailVC, animated: true)
+            }
+        }
     }
